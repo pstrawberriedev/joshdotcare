@@ -9,12 +9,12 @@
 
 // Define DOM Elements
 // _
-var dom = {};
-dom.element = {};
-dom.element.footer = $('footer');
-dom.element.footer.triggers = $('footer h5');
-dom.element.footer.lists = $('footer ul');
-dom.element.header = $('header');
+var animate = {};
+animate.footer = $('footer');
+animate.footerTriggers = $('footer h5');
+animate.footerLists = $('footer ul');
+animate.footerIcons = $('footer i');
+animate.header = $('header');
 
 // Generic: Get Largest Height of [hidden/visible] Element(s)
 // _
@@ -35,25 +35,23 @@ function getGreatestHeight(elements) {
 
 // Page: Footer Collapse
 // _
-dom.element.footer.triggers.on('click', function() {
+animate.footerTriggers.on('click', function() {
     
   //local vars
-  var top = dom.element.footer;
-  var lists = dom.element.footer.lists;
-  var greatestHeight = getGreatestHeight(dom.element.footer.lists);
-  console.log(greatestHeight);
-  
-  //animations
-  var tl = new TimelineLite({paused:true});
-  tl.from(lists, 0.2, {height:0, overflow:"hidden"})
-  tl.to(lists, 0.2, {height:greatestHeight, overflow:"visible"})
-  
+  var top = animate.footer;
+  var lists = animate.footerLists;
+  var icons = animate.footerIcons;
+  var greatestHeight = getGreatestHeight(animate.footerLists);
+
+  //logic + animations
   if(top.hasClass('active')) {
     top.removeClass('active');
-    tl.reverse();
+    TweenLite.to(lists, 0.18, {"max-height":0,ease:Power1.easeOut})
+    TweenLite.to(icons, 0.3, {transform:"rotateX(0deg)"})
   } else {
     top.addClass('active');
-    tl.play();
+    TweenLite.to(lists, 0.18, {"max-height":greatestHeight,ease:Power1.easeIn})
+    TweenLite.to(icons, 0.3, {transform:"rotateX(180deg)"})
   }
   
 });
