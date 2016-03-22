@@ -3,6 +3,7 @@
 */
 
 // Global (Header + Footer)
+// +++++++++++
 header, footer {
   position:relative;
   display:block;
@@ -12,19 +13,34 @@ header, footer {
 }
 
 // Header
+// +++++++++++
 header {
   border-bottom:1px solid #eaeaea;
   margin-bottom:1em;
 }
 
 // Footer
+// +++++++++++
 footer {
   margin-top:1em;
   background:transparent;
   border-top:1px solid #eaeaea;
-    p {
-      text-align:center;
-      font-size:.8em;
-      color:#ccc;
+  h5 {
+    text-align:left;
+    font-size:.8em;
+    margin-bottom:.5em;
+    color:#999;
+    cursor:pointer;
+  }
+  ul {
+    height:0px;
+    overflow:hidden;
+    text-align:left;
+    list-style-type:none;
+    font-size:.6em;
+    color:#aaa;
+    li {
+      padding:.15em 0;
     }
+  }
 }

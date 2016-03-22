@@ -2,14 +2,11 @@
   scratch.js
 */
 
-// Say Hi outside of doc ready
-console.log('--> scratch.js');
-
-// On Ready
-$(document).ready(function() {
+// Selfie!
+(function() {
   
-  //Say Hi
-  console.log('--> scratch.js (doc ready)');
+  // Say Hi!
+  console.log('--> scratch.js');
   
   // Flowtype Init
   // http://simplefocus.com/flowtype/
@@ -20,5 +17,8 @@ $(document).ready(function() {
      maxFont   : 20,
      fontRatio : 30
   });
+  console.log('----> flowtype init');
   
-});
+})();
+
+// Outside jQ Doc Ready
