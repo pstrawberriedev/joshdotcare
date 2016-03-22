@@ -16,6 +16,6 @@
     "less-middleware": "^2.0.1",
     "mdi": "^1.5.54",
     "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0",
+    "serve-favicon": "~2.3.0"
   }
 }
