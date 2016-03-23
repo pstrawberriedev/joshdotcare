@@ -9,7 +9,7 @@
     
     <!-- Title -->
     <title>
-      {{master.title}} {{#if page}} > {{page}}{{/if}}
+      {{master.title}} {{#if page}} &rsaquo; {{page}}{{/if}}
     </title>
 
     <!-- CSS -->
@@ -24,10 +24,14 @@
     
     <!-- Header -->
     <header role="main">
-      <h5></h5>
-    </header>
-    
-    <!-- Navigation -->
-    <nav role="main">
       
-    </nav>
+      <!-- Title -->
+      <p class="title">{{master.shortTitle}}</p>
+      
+      <!-- Navigation -->
+      <nav role="main">
+        <i class="mdi mdi-menu"></i>
+        <div class="menuArea"></div>
+      </nav>
+      
+    </header>

@@ -10,26 +10,52 @@ header, footer {
   width:100%;
   clear:both;
   padding:1em;
+  border:0;
 }
 
 // Header
 // +++++++++++
 header {
-  border-bottom:1px solid #eaeaea;
   margin-bottom:1em;
+  background:@primary;
+  color:#fff;
+  .clearfix;
+  .title {
+    float:right;
+    display:block;
+    text-align:right;
+  }
+}
+
+nav[role=main] {
+  float:left;
+  display:block;
+  position:relative;
+  i {
+    font-size:1.5em;
+  }
+  .menuArea {
+    position:absolute;
+    display:block;
+    left:-1em;
+    top:-1em;
+    bottom:-1em;
+    width:120px;
+    background:transparent;
+    cursor:pointer;
+  }
 }
 
 // Footer
 // +++++++++++
 footer {
+  position:relative;
   margin-top:1em;
-  background:transparent;
-  border-top:1px solid #eaeaea;
+  color:@accent;
   h5 {
     text-align:left;
     font-size:.8em;
     margin-bottom:.5em;
-    color:#999;
     cursor:pointer;
   }
   ul {
@@ -38,7 +64,6 @@ footer {
     text-align:left;
     list-style-type:none;
     font-size:.6em;
-    color:#aaa;
     li {
       padding:.15em 0;
     }
