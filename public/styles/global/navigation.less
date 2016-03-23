@@ -9,48 +9,33 @@ header, footer {
   display:block;
   width:100%;
   clear:both;
-  padding:1em;
   border:0;
 }
 
 // Header
 // +++++++++++
 header {
-  background:@primary;
-  color:#fff;
-  .clearfix;
-  .title {
-    float:right;
-    display:block;
-    text-align:right;
-  }
-}
-
-nav[role=main] {
-  float:left;
+  background:@darkPrimary;
+  width:100%;
+  height:18px;
   display:block;
   position:relative;
-  i {
-    font-size:1.5em;
-  }
-  .menuArea {
-    position:absolute;
-    display:block;
-    left:-1em;
-    top:-1em;
-    bottom:-1em;
-    width:120px;
-    background:transparent;
-    cursor:pointer;
-  }
 }
 
 // Footer
 // +++++++++++
 footer {
   position:relative;
-  color:@accent;
-  background:#fff;
+  padding:1em;
+  color:#fff;
+  background:@primary;
+  .menu {
+    font-size:1.5em;
+    cursor:pointer;
+    h5 {
+      padding:0;
+    }
+  }
   h5 {
     text-align:left;
     font-size:.8em;
@@ -65,6 +50,17 @@ footer {
     font-size:.6em;
     li {
       padding:.15em 0;
+      &:first-child {
+        border-top:1px solid #fff;
+        padding-top:.8em;
+      }
+    }
+  }
+  .logo {
+    a {
+      display:block;
+      text-align:right;
+      padding-right:.4em;
     }
   }
 }
