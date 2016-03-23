@@ -24,14 +24,22 @@
 // Home Page
 // _
 if($('#home').length) {
-  
- var swiper = new Swiper('.swiper-container', {
-    pagination: '.swiper-pagination',
+
+  // Swiper!
+  // http://idangero.us/swiper/
+  var swiper = new Swiper('.swiper-container', 
+                          {
+    scrollbar: '.swiper-scrollbar',
+    scrollbarHide: true,
     slidesPerView: 2,
     paginationClickable: true,
     spaceBetween: 30,
     freeMode: true,
-    freeModeMomentum: false
+    freeModeMomentum: false,
+    keyboardControl: true,
+    mousewheelControl: true,
+    hashnav: true,
+    
   });
-  
+
 }
