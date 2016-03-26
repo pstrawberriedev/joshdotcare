@@ -31,7 +31,7 @@ if($('#home').length) {
                           {
     scrollbar: '.swiper-scrollbar',
     scrollbarHide: true,
-    slidesPerView: 2,
+    slidesPerView: 4,
     paginationClickable: true,
     spaceBetween: 30,
     freeMode: true,
